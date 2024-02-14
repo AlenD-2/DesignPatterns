@@ -1,6 +1,7 @@
 #pragma once
 
-#include <QDebug>
+#include <iostream>
+#include <string>
 
 
 namespace StaticDecorator {
@@ -20,7 +21,7 @@ public:
     {}
     void print()const override
     {
-        qDebug() << "Circle shape, radius is: " << radius;
+        std::cout << "Circle shape, radius is: " << radius << '\n';
     }
     void resize(float newRadius)
     {
@@ -38,15 +39,15 @@ public:
     ColoredShape()
     {}
     template<typename...Args>
-    ColoredShape(const QString& color, Args ...arg): T(std::forward<Args>(arg)...), color(color)
+    ColoredShape(const std::string& color, Args ...arg): T(std::forward<Args>(arg)...), color(color)
     {}
     void print()const override
     {
         T::print();
-        qDebug() << "color is: " << color;
+        std::cout << "color is: " << color << '\n';
     }
 
-    QString color;
+    std::string color;
 };
 
 template<typename T>
@@ -62,7 +63,7 @@ public:
     void print()const override
     {
         T::print();
-        qDebug() << "transparency is: " << transparency;
+        std::cout << "transparency is: " << transparency << '\n';
     }
 
     int transparency;

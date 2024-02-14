@@ -1,6 +1,6 @@
 #pragma once
 
-#include <QDebug>
+#include <iostream>
 #include <math.h>
 
 namespace Factory {
@@ -13,7 +13,7 @@ class Point
 public:
     void print()const
     {
-        qDebug() << "(" << _a << "," << _b << ")";
+        std::cout << "(" << _a << "," << _b << ")" << '\n';
     }
 private:
     Point(float a, float b): _a{a}, _b{b}

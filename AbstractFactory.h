@@ -1,7 +1,7 @@
 #pragma once
 
 #include <map>
-#include <QDebug>
+#include <iostream>
 
 
 namespace AbstractFactory {
@@ -21,7 +21,7 @@ class FastWalking : public IWalk
 public:
     IWalk* startWalking()override
     {
-        qDebug()<<"fast walking";
+        std::cout << "fast walking" << '\n';
         return this;
     }
 };
@@ -31,7 +31,7 @@ class SlowWalking : public IWalk
 public:
     IWalk* startWalking()override
     {
-        qDebug()<<"slow walking";
+        std::cout << "slow walking" << '\n';
         return this;
     }
 };

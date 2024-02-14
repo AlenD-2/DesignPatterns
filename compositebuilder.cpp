@@ -1,12 +1,13 @@
 #include "compositebuilder.h"
-#include <QDebug>
+
+#include <iostream>
 
 namespace CompositeBuilder {
 
 
 PersonBuilderBase::~PersonBuilderBase()
 {
-    qDebug()<<"dis";
+    std::cout << "dis" << '\n';
     if(addressBuilder != nullptr)
     {
         delete addressBuilder;

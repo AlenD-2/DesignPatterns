@@ -1,7 +1,7 @@
 #pragma once
 
-#include <QDebug>
-#include <QString>
+#include <string>
+#include <iostream>
 
 
 namespace DynamicDecorator {
@@ -19,7 +19,7 @@ public:
     {}
     void print()const override
     {
-        qDebug() << "Circle shape, radius is: " << _radius;
+        std::cout << "Circle shape, radius is: " << _radius << '\n';
     }
     void resize(float newRadius)
     {
@@ -33,17 +33,17 @@ private:
 class ColoredShape : public Shape
 {
 public:
-    ColoredShape(Shape& shape, const QString& color): _shape(shape), _color(color)
+    ColoredShape(Shape& shape, const std::string& color): _shape(shape), _color(color)
     {}
     void print()const override
     {
         _shape.print();
-        qDebug() << "color is: " << _color;
+        std::cout << "color is: " << _color << '\n';
     }
 
 private:
     Shape& _shape;
-    QString _color;
+    std::string _color;
 };
 
 
@@ -55,7 +55,7 @@ public:
     void print()const override
     {
         _shape.print();
-        qDebug() << "transparency is: " << _transparency;
+        std::cout << "transparency is: " << _transparency << '\n';
     }
 
 private:
