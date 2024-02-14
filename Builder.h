@@ -28,14 +28,10 @@ class stringBuilder
 {
 public:
     std::vector<stringElement> stringList;
-    stringBuilder* add(const std::string &str)
+    std::unique_ptr<stringBuilder> add(const std::string &str)
     {
         stringList.push_back(stringElement(str));
-        return this;
-    }
-    operator stringElement ()const
-    {
-        return stringList.at(0);
+        return std::make_unique<stringBuilder>(*this);
     }
 };
 
