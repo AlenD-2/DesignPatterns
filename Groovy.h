@@ -4,6 +4,8 @@
 #include <vector>
 #include <iostream>
 
+namespace GroovyBuilder {
+
 
 class Book
 {
@@ -51,3 +53,6 @@ public:
     C(std::vector<std::string> text): Book{"Lesson", text}
     {}
 };
+
+
+}

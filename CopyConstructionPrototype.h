@@ -2,6 +2,9 @@
 
 #include <string>
 
+namespace CopyConstructionPrototype {
+
+
 class Address
 {
 public:
@@ -29,3 +32,6 @@ public:
     std::string name;
     Address* address = nullptr;
 };
+
+
+}

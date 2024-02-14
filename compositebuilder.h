@@ -3,6 +3,9 @@
 #include <string>
 #include <iostream>
 
+namespace CompositeBuilder {
+
+
 class PersonAddressBuilder;
 class PersonJobBuilder;
 class PersonBuilder;
@@ -104,3 +107,4 @@ public:
 };
 
 
+}

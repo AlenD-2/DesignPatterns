@@ -4,6 +4,9 @@
 #include <array>
 #include <numeric>
 
+
+namespace ArrayBacked {
+
 class Score
 {
 public:
@@ -35,3 +38,5 @@ public:
 private:
     std::array<int,count> properties;
 };
+
+}

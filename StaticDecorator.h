@@ -2,6 +2,9 @@
 
 #include <QDebug>
 
+
+namespace StaticDecorator {
+
 class Shape
 {
 public:
@@ -64,3 +67,5 @@ public:
 
     int transparency;
 };
+
+}

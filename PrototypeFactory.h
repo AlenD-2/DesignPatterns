@@ -2,6 +2,9 @@
 
 #include <string>
 
+namespace PrototypeFactory {
+
+
 class Address
 {
 public:
@@ -43,3 +46,6 @@ public:
 };
 
 Contact Contact::ContactFactory::tehran = Contact{"",Address{"tehran", "iran"}};
+
+
+}

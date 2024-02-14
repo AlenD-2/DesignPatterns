@@ -1,5 +1,8 @@
 #pragma once
 
+
+namespace ClassicSingleton {
+
 class Data
 {
     Data(){}
@@ -16,3 +19,5 @@ public:
 };
 
 //int Data::data = 0;
+
+}

@@ -2,6 +2,9 @@
 
 #include <vector>
 
+
+namespace Adapter {
+
 class Point
 {
 public:
@@ -45,3 +48,5 @@ public:
     }
     std::vector<Point> points;
 };
+
+}

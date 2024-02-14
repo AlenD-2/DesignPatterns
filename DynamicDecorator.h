@@ -3,6 +3,9 @@
 #include <QDebug>
 #include <QString>
 
+
+namespace DynamicDecorator {
+
 class Shape
 {
 public:
@@ -59,3 +62,5 @@ private:
     Shape& _shape;
     int _transparency;
 };
+
+}

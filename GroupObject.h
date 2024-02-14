@@ -4,6 +4,9 @@
 #include <iostream>
 #include <vector>
 
+
+namespace GroupObject {
+
 class IName
 {
 public:
@@ -39,3 +42,5 @@ public:
 private:
     std::vector<IName*> group;
 };
+
+}

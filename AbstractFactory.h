@@ -4,6 +4,9 @@
 #include <QDebug>
 
 
+namespace AbstractFactory {
+
+
 class IWalk
 {
 public:
@@ -102,3 +105,6 @@ public:
 private:
     std::map<int, IWalkFactory*> walkFactories;
 };
+
+
+}

@@ -1,6 +1,9 @@
 #include "compositebuilder.h"
 #include <QDebug>
 
+namespace CompositeBuilder {
+
+
 PersonBuilderBase::~PersonBuilderBase()
 {
     qDebug()<<"dis";
@@ -27,4 +30,7 @@ PersonJobBuilder &PersonBuilderBase::work()
     if(jobBuilder == nullptr)
         jobBuilder = new PersonJobBuilder(this);
     return *jobBuilder;
+}
+
+
 }

@@ -3,6 +3,8 @@
 #include <QDebug>
 #include <math.h>
 
+namespace Factory {
+
 
 class Point
 {
@@ -34,3 +36,6 @@ public:
         return Point{r*std::cos(theta), r*std::sin(theta)};
     }
 };
+
+
+}

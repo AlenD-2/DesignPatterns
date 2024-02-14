@@ -2,6 +2,10 @@
 
 #include <vector>
 #include <memory>
+#include <string>
+
+namespace Builder
+{
 
 class stringBuilder;
 
@@ -34,3 +38,5 @@ public:
         return stringList.at(0);
     }
 };
+
+}
